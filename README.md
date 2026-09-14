@@ -1,17 +1,22 @@
 🧠 NeuroNest: Personalized Cognitive Care
 
 AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER)
+<p>
 
 ""Live Demo" (https://neuronest-iota.vercel.app)"
+<p>
 ""Backend" (https://neuronest-hv66.onrender.com)"
-""Repository" ()"
+<p>
+""Repository" (https://github.com/umarshaik18/neuronest.git)"
 
 ---
 
 🌐 Live Demo
 
 🚀 Try NeuroNest:
+<p>
 "Open Live Website" (https://neuronest-iota.vercel.app)
+<p>
 
 NeuroNest is an AI-powered platform designed to support cognitive activity and memory assistance through interactive games, performance tracking, analytics, and personalized recommendations.
 
