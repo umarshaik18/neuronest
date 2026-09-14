@@ -32,7 +32,7 @@ export interface GameResultResponse {
     reason: string;
   };
 }
-
+const API_BASE_URL = 'https://neuronest-hv66.onrender.com';
 export const api = {
   // Games
   async getGames() {
