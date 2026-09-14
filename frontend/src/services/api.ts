@@ -37,7 +37,7 @@ export const api = {
   // Games
   async getGames() {
     try {
-      const res = await fetch('/api/games');
+      const res = await fetch(`${API_BASE_URL}/api/games`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return [
@@ -82,7 +82,7 @@ export const api = {
   // Game Result submission
   async submitGameResult(gameId: string, payload: GameSessionPayload): Promise<GameResultResponse> {
     try {
-      const res = await fetch(`/api/games/${gameId}/result`, {
+      const res = await fetch(`${API_BASE_URL}/api/games/${gameId}/result`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -157,7 +157,7 @@ export const api = {
   // Recommendations
   async getRecommendation(userId: string) {
     try {
-      const res = await fetch(`/api/recommendations/${userId}`);
+      const res = await fetch(`${API_BASE_URL}/api/recommendations/${userId}`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return {
@@ -179,7 +179,7 @@ export const api = {
   // Performance Analytics
   async getPerformance(userId: string) {
     try {
-      const res = await fetch(`/api/performance/${userId}`);
+      const res = await fetch(`${API_BASE_URL}/api/performance/${userId}`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return {
@@ -199,7 +199,7 @@ export const api = {
 
   async getWeeklyTrends(userId: string) {
     try {
-      const res = await fetch(`/api/performance/${userId}/weekly`);
+      const res = await fetch(`${API_BASE_URL}/api/performance/${userId}/weekly`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return [
@@ -216,7 +216,7 @@ export const api = {
   // Tasks
   async getTasks(userId: string) {
     try {
-      const res = await fetch(`/api/tasks/${userId}`);
+      const res = await fetch(`${API_BASE_URL}/api/tasks/${userId}`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return [
@@ -231,7 +231,7 @@ export const api = {
 
   async toggleTask(taskId: string) {
     try {
-      const res = await fetch(`/api/tasks/${taskId}/toggle`, { method: 'PUT' });
+      const res = await fetch(`${API_BASE_URL}/api/tasks/${taskId}/toggle`, { method: 'PUT' });
       if (res.ok) return await res.json();
     } catch (e) {}
     return { status: 'success' };
@@ -239,7 +239,7 @@ export const api = {
 
   async createTask(data: { user_id: string; title: string; description?: string; scheduled_time: string }) {
     try {
-      const res = await fetch('/api/tasks', {
+      const res = await fetch(`${API_BASE_URL}/api/tasks`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -252,7 +252,7 @@ export const api = {
   // Memory Items
   async getMemories(userId: string) {
     try {
-      const res = await fetch(`/api/memory/${userId}`);
+      const res = await fetch(`${API_BASE_URL}/api/memory/${userId}`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return [
@@ -270,7 +270,7 @@ export const api = {
 
   async addMemory(data: { user_id: string; category: string; title: string; description: string; reminder_time?: string; photo_url?: string; relation?: string }) {
     try {
-      const res = await fetch('/api/memory', {
+      const res = await fetch(`${API_BASE_URL}/api/memory`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -283,7 +283,7 @@ export const api = {
   // Voice Interaction
   async interactVoice(userId: string, userMessage: string, language: string) {
     try {
-      const res = await fetch('/api/voice/interact', {
+      const res = await fetch(`${API_BASE_URL}/api/voice/interact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ user_id: userId, user_message: userMessage, language })
@@ -312,7 +312,7 @@ export const api = {
   // Admin
   async getAdminMetrics() {
     try {
-      const res = await fetch('/api/admin/metrics');
+      const res = await fetch(`${API_BASE_URL}/api/admin/metrics`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return {
@@ -328,7 +328,7 @@ export const api = {
 
   async getRegionalData() {
     try {
-      const res = await fetch('/api/admin/regional');
+      const res = await fetch(`${API_BASE_URL}/api/admin/regional`);
       if (res.ok) return await res.json();
     } catch (e) {}
     return [
