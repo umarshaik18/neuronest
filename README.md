@@ -2,11 +2,6 @@
 
 AI-Based Cognitive Gaming and Memory Assistance Platform for Elderly Dementia Patients in the North Eastern Region (NER)
 <p>
-
-""Live Demo" (https://neuronest-iota.vercel.app)"
-<p>
-""Backend" (https://neuronest-hv66.onrender.com)"
-<p>
 ""Repository" (https://github.com/umarshaik18/neuronest.git)"
 
 ---
